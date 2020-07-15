@@ -11,7 +11,6 @@ def logo():
 # Created by: Andrew Sturm
 # Created on: 2020-07-13
 #
-#
 ##############################################################
 ##############################################################
 
@@ -38,24 +37,23 @@ def main():
     dictPwned = {}
     pwnedEmail = ""
     pwnedBreach = ""
-    strUsername = ""
-    strUserchoice = ""
+    userChoice = ""
     emails = {}
 
     while True:
-        strUserchoice = input('''
+        userChoice = input('''
 In order for the script to work, CSVs must be located in ../csv and be named the following:
 \'hibp.csv\' and \'staffemails.csv\'.
 
 Are you ready to run the script? (Y/N): 
 ''')
 
-        if strUserchoice.lower() not in ('y', 'n'):
+        if userChoice.lower() not in ('y', 'n'):
             print('Invalid input.\n')
         else:
             break
 
-    if strUserchoice == 'y':
+    if userChoice == 'y':
         clear()
         logo()
 
