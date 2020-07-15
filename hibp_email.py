@@ -31,14 +31,17 @@ def clear():
         _ = os.system('clear')
 
 def main():
+# Start off with a clean slate
     clear()
     logo()
+
+# Declare variables
     staffEmail = []
     dictPwned = {}
+    emails = {}
     pwnedEmail = ""
     pwnedBreach = ""
     userChoice = ""
-    emails = {}
 
     while True:
         userChoice = input('''
@@ -53,7 +56,7 @@ Are you ready to run the script? (Y/N):
         else:
             break
 
-    if userChoice == 'y':
+    if userChoice.lower() == 'y':
         clear()
         logo()
 
@@ -108,7 +111,7 @@ automation and is not monitored.\" subject \"HaveIBeenPwned.com Alert\" recipien
             exit()
 
 
-    elif strUserchoice == 'n':
+    elif userChoice.lower() == 'n':
         exit()
 
     exit()
